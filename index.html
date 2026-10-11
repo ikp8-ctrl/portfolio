@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ishan Patel | Personal Portfolio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #182238;
+      line-height: 1.7;
+    }
+    header {
+      background: #101d36;
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    header h2 { font-size: 21px; }
+    nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; }
+    nav a:hover { color: #93c5fd; }
+    main { max-width: 1000px; margin: auto; padding: 30px 22px 60px; }
+    .hero {
+      background: #e4edff;
+      padding: 65px 35px;
+      border-radius: 18px;
+      margin: 28px 0 40px;
+    }
+    .hero .eyebrow {
+      color: #2855a6;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+    h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1.2; margin: 12px 0; }
+    .hero p { max-width: 650px; font-size: 18px; }
+    .button {
+      display: inline-block;
+      margin-top: 22px;
+      background: #214b91;
+      color: white;
+      padding: 11px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    section { margin: 42px 0; scroll-margin-top: 20px; }
+    h2.section-title { font-size: 28px; margin-bottom: 18px; }
+    .skills { display: flex; gap: 10px; flex-wrap: wrap; }
+    .skill {
+      background: white;
+      border: 1px solid #dbe3ef;
+      border-radius: 20px;
+      padding: 8px 15px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+    .project {
+      background: white;
+      border: 1px solid #e0e6ef;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 5px 18px #1725540a;
+    }
+    .project h3 { margin-bottom: 10px; }
+    .project a { color: #214b91; font-weight: bold; }
+    #contact {
+      background: #e4edff;
+      padding: 28px;
+      border-radius: 14px;
+    }
+    footer { text-align: center; padding: 24px; color: #64748b; }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Ishan Patel</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero" id="about">
+      <p class="eyebrow">Student Portfolio</p>
+      <h1>Hello, I'm Ishan Patel.</h1>
+      <p>
+        I am a Rutgers Business School student interested in using
+        business knowledge, analytical thinking, and technology to
+        solve problems and create value.
+      </p>
+      <a class="button" href="#projects">Explore My Projects</a>
+    </div>
+
+    <section id="skills">
+      <h2 class="section-title">My Skills</h2>
+      <div class="skills">
+        <span class="skill">Communication</span>
+        <span class="skill">Teamwork</span>
+        <span class="skill">Problem Solving</span>
+        <span class="skill">Microsoft Excel</span>
+        <span class="skill">Presentation Skills</span>
+        <span class="skill">Time Management</span>
+        <span class="skill">Research</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">My Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>Project One: Business Analysis</h3>
+          <p>
+            Describe a class assignment where you researched a business
+            problem, analyzed information, and presented recommendations.
+          </p>
+          <p><em>Tools: Add the tools you actually used.</em></p>
+        </article>
+
+        <article class="project">
+          <h3>Project Two: Marketing Strategy</h3>
+          <p>
+            Describe a project involving a brand, target audience,
+            marketing strategy, or customer research.
+          </p>
+          <p><em>Skills: Research, communication, and strategy.</em></p>
+        </article>
+
+        <article class="project">
+          <h3>Project Three: Data or Spreadsheet Analysis</h3>
+          <p>
+            Describe a spreadsheet, data analysis, presentation, or
+            other relevant project you completed.
+          </p>
+          <p><em>Tools: Include only the tools you actually used.</em></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p>I'm always interested in learning, collaborating, and
+        connecting with other professionals.</p>
+      <p>Rutgers Business School</p>
+      <!-- Add a professional email or LinkedIn link if desired. -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Ishan Patel | Personal Portfolio</p>
+  </footer>
+</body>
+</html>
