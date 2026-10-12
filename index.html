@@ -1,40 +1,277 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ishan Patel | Personal Portfolio</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #182238;
-      line-height: 1.7;
-    }
-    header {
-      background: #101d36;
-      color: white;
-      padding: 20px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    header h2 { font-size: 21px; }
-    nav { display: flex; gap: 20px; flex-wrap: wrap; }
-    nav a { color: white; text-decoration: none; }
-    nav a:hover { color: #93c5fd; }
-    main { max-width: 1000px; margin: auto; padding: 30px 22px 60px; }
-    .hero {
-      background: #e4edff;
-      padding: 65px 35px;
-      border-radius: 18px;
-      margin: 28px 0 40px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishan Patel - Student Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #002e6d;
+            --accent-color: #cc0033;
+            --bg-color: #f8f9fa;
+            --text-color: #333333;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e1e4e8;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 3.5rem 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+            color: #d0d7de;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .personal-statement {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #444;
+            text-align: center;
+            margin: 0;
+            font-style: italic;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            background: #eef2f7;
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid #d0d7de;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 1.25rem;
+            background: #fafbfc;
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .project-card .tools {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 0.75rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-brand">Ishan Patel</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>STUDENT PORTFOLIO</h1>
+        <p>Hello, I'm Ishan Patel.</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- SECTION 1: Personal Statement / About -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="personal-statement">
+                "I am a Finance student at Rutgers Business School interested in using financial analysis, analytical thinking, and technology to solve problems and create strategic value."
+            </p>
+        </section>
+
+        <!-- SECTION 2: Skills Showcase -->
+        <section id="skills">
+            <h2>My Skills</h2>
+            <ul class="skills-list">
+                <li>Program Financial Analysis (PFA)</li>
+                <li>Financial Modeling</li>
+                <li>Microsoft Excel</li>
+                <li>Data Analysis</li>
+                <li>Problem Solving</li>
+                <li>Communication</li>
+                <li>Teamwork</li>
+                <li>Time Management</li>
+            </ul>
+        </section>
+
+        <!-- SECTION 3: Projects Showcase -->
+        <section id="projects">
+            <h2>My Projects & Experience</h2>
+            <div class="project-grid">
+                
+                <!-- Project 1: Internship -->
+                <div class="project-card">
+                    <h3>Program Financial Analysis (L3Harris Internship)</h3>
+                    <p>Monitored program budgets, cost variance reports, and financial forecasting models to optimize project performance and corporate reporting during my PFA internship.</p>
+                    <p class="tools"><strong>Tools:</strong> Advanced Excel, Financial Systems, Corporate Reporting Tools</p>
+                    <a href="https://github.com/your-username/l3harris-pfa-summary" target="_blank">View Summary &rarr;</a>
+                </div>
+
+                <!-- Project 2: Business Analysis -->
+                <div class="project-card">
+                    <h3>Corporate Valuation & Financial Modeling</h3>
+                    <p>Researched corporate market trends, analyzed financial statements using discounted cash flow (DCF) models, and presented valuation recommendations.</p>
+                    <p class="tools"><strong>Tools:</strong> Microsoft Excel, Bloomberg Terminal, Market Research</p>
+                    <a href="https://github.com/your-username/corporate-valuation-project" target="_blank">View Project &rarr;</a>
+                </div>
+
+                <!-- Project 3: Portfolio Creation -->
+                <div class="project-card">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>Designed and built a responsive digital portfolio using HTML and CSS, published via GitHub Pages to showcase academic work and experience.</p>
+                    <p class="tools"><strong>Tools:</strong> HTML, CSS, Git, GitHub Pages</p>
+                    <a href="https://github.com/your-username/personal-portfolio" target="_blank">View Repository &rarr;</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 4: Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>I'm always interested in learning, collaborating, and connecting with other professionals.</p>
+            <p><strong>School:</strong> Rutgers Business School</p>
+            <p><strong>Email:</strong> <a href="mailto:your.email@rutgers.edu">your.email@rutgers.edu</a></p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ishan Patel | Rutgers Business School Personal Portfolio</p>
+    </footer>
+
+</body>
+</html>    }
     .hero .eyebrow {
       color: #2855a6;
       font-weight: bold;
